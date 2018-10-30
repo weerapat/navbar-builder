@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('pages.index');
 });
+
+/* Route for navigation bar */
+Route::group([
+    'namespace' => 'NavigationBar',
+    'prefix' => 'navigation-bar',
+], function () {
+    Route::get('/', 'NavigationBarController@index')->name('navigation-bar-index');
+    Route::get('setting', 'NavigationBarController@getSetting');
+    Route::put('setting', 'NavigationBarController@saveSetting');
+});
