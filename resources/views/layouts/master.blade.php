@@ -7,9 +7,13 @@
 
         <title>@yield('title')</title>
 
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        @yield('page-style')
     </head>
     <body>
         @yield('content')
+
+        <script src="{{ asset('js/vendor/jquery.js') }}"></script>
+        @stack('scripts')
     </body>
 </html>
