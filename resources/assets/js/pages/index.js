@@ -1,8 +1,15 @@
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 $(document).ready(function () {
     var $form = $('#navigation-cms');
     var $cmsBarArr = [];
     var max = 10;
-    var navigationUrl = 'navbar.json';
+    var navigationUrl = 'navigation-bar/setting';
+    // var navigationUrl = 'navbar.json';
     var start = 0;
     $.ajax({
         url: navigationUrl,
