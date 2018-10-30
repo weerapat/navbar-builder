@@ -2,17 +2,6 @@
 
 @section('title', 'Navigation bar CMS')
 
-@section('page-style')
-    <style>
-        label.error {
-            color: #ff0000;
-        }
-        input.error {
-            border-color: #ff0000;
-        }
-    </style>
-@endsection
-
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>

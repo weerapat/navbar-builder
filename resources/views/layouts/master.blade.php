@@ -9,7 +9,7 @@
         <title>@yield('title')</title>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        @yield('page-style')
+        @stack('styles')
     </head>
     <body>
         @yield('content')

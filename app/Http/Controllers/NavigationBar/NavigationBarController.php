@@ -26,6 +26,17 @@ class NavigationBarController extends Controller
      *
      * @return JsonResponse
      */
+//    public function get()
+//    {
+//        $navigationBar = NavigationBar::find(1);
+//        if (!$navigationBar) {
+//            return response()->json([]);
+//        }
+//        $navigationBar = $navigationBar->bar;
+//
+//        return response()->json($navigationBar);
+//    }
+
     public function get()
     {
         $navigationBar = NavigationBar::find(1);
@@ -33,8 +44,20 @@ class NavigationBarController extends Controller
             return response()->json([]);
         }
         $navigationBar = $navigationBar->bar;
-        return response()->json($navigationBar);
+
+        //subNavigationMenu
+        //dd($navigationBar);
+        //
+
+        //return response()->json($navigationBar);
+        return view('partials.navbar-desktop-new', [
+            'companyPhone' => '02-99999999',
+            'disablePhoneBlock' => false,
+            'hidePhoneAndHour' => $hidePhoneAndHour ?? false,
+            'subNavigationMenu' => $navigationBar,
+        ]);
     }
+
     /**
      * Get Navigation Bar Setting
      *

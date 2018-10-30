@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Navigation Bar
+Route::group([
+    'namespace' => 'NavigationBar',
+    'prefix' => 'navigation-bar',
+], function () {
+    Route::get('/', 'NavigationBarController@get');
+});

@@ -1,5 +1,6 @@
 {
     "/js/pages/index.js": "/js/pages/index.js",
     "/css/app.css": "/css/app.css",
+    "/css/navigation.css": "/css/navigation.css",
     "/js/vendor/jquery.js": "/js/vendor/jquery.js"
 }
